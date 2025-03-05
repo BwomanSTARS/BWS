@@ -1,0 +1,199 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 30px;
+    border: none;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 16px;
+    position: relative;
+    animation: modalOpen 0.3s ease-out;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #000;
+}
+
+.modal h2 {
+    color: var(--text);
+    font-size: 1.8em;
+    margin-bottom: 1.5rem;
+    padding-right: 40px;
+}
+
+.modal-content .about-intro {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.modal-content .services-highlight {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.modal-content .service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.modal-content .service-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.modal-content .values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-content .values li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.modal-content .values li::before {
+    content: '★';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 10% auto;
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .modal-content .service-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos específicos para o modal de localização */
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.address-info {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.address-info h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.4em;
+}
+
+.address-info p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+.about-image {
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+    min-height: 300px;
+    position: relative;
+    background: #f8f9fa;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clinic-image {
+    max-width: 100%;
+    height: auto;
+    min-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    background-color: #f8f9fa;
+}
+
+.clinic-image[src='images/placeholder.jpg'] {
+    opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+    .location-content {
+        grid-template-columns: 300px 1fr;
+    }
+
+    .clinic-image {
+        max-width: 80%;
+    }
+}

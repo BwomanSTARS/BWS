@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Woman Stars</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/reviews.css">
+    <script src="js/mobile-menu.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content container">
+            <div class="header-left">
+            <a href="#" class="home-link">
+                <div class="logo">
+                <h1>Beauty Woman Stars</h1>
+                </div>
+            </a>
+            </div>
+
+            <div class="header-right">
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                <a href="#sobre" class="nav-button modal-trigger" data-modal="sobreModal">Sobre</a>
+                <a href="#servicos" class="nav-button" onclick="window.location.href='treatments.html'">Serviços</a>
+                <a href="#localizacao" class="nav-button modal-trigger" data-modal="localizacaoModal">Localização</a>
+                <a href="#reviews" class="nav-button modal-trigger" data-modal="reviewsModal">Avaliações</a>
+            </nav>
+
+            <!-- Mobile Navigation -->
+            <nav class="nav-mobile">
+                <div class="nav-mobile-content">
+                <a href="#sobre" class="nav-button modal-trigger" data-modal="sobreModal">Sobre</a>
+                <a href="#servicos" class="nav-button" onclick="window.location.href='treatments.html'">Serviços</a>
+                <a href="#localizacao" class="nav-button modal-trigger" data-modal="localizacaoModal">Localização</a>
+                <a href="#reviews" class="nav-button modal-trigger" data-modal="reviewsModal">Avaliações</a>
+                </div>
+            </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre" style="display: none;">
+            <!-- Original content stays but won't be visible on page -->
+        </section>
+
+        <div id="sobreModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Seu Refúgio de Beleza e Bem-Estar em Porto Alegre Te Espera! ✨</h2>
+                <div class="about-intro">
+                    <div class="about-image">
+                        <img src="images/clinica.jpg"
+                             alt="Beauty Woman Stars - Interior da Clínica" 
+                             class="clinic-image"
+                             onerror="this.onerror=null; if(!this.src.includes('placeholder.svg')) this.src='images/placeholder.svg';">
+                    </div>
+                    <p>Na Beauty Woman Stars, acreditamos que a beleza autêntica irradia de dentro para fora. Mais do que uma clínica, somos o seu oásis particular em Porto Alegre, um espaço onde você se sente acolhida e cuidada em cada detalhe. Nosso propósito é realçar a sua beleza natural e nutrir o seu bem-estar interior, para que você brilhe em todas as áreas da sua vida.</p>
+                    
+                    <p>Nossa história nasceu de um sonho: criar um lugar onde a beleza fosse tratada de forma completa e verdadeiramente personalizada. Sabemos que cada mulher é única, com suas próprias necessidades e desejos. Por isso, reunimos uma equipe multidisciplinar apaixonada e altamente qualificada, pronta para te guiar em uma jornada de transformação e autocuidado.</p>
+                </div>
+
+                <div class="services-highlight">
+                    <h3>Nosso diferencial que você sente na pele:</h3>
+                    <div class="service-cards">
+                        <div class="service-card">
+                            <h4>Biomédica Especializada - Sua Beleza em Mãos Seguras</h4>
+                            <p>Relaxe e confie. Nossos procedimentos estéticos avançados são realizados com precisão cirúrgica e sensibilidade artística por nossa biomédica especialista.</p>
+                        </div>
+                        <div class="service-card">
+                            <h4>Nutricionista - Nutrição que Transforma de Dentro para Fora</h4>
+                            <p>Alcance seus objetivos de saúde e estética com um plano alimentar delicioso e sob medida, criado por nossa nutricionista.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="values">
+                    <h3>Nossos Valores - A Estrela Guia da Beauty Woman Stars</h3>
+                    <ul>
+                        <li><strong>Cuidado Integral</strong> - Você no Centro de Tudo</li>
+                        <li><strong>Personalização</strong> - Sua Beleza, Seu Tratamento</li>
+                        <li><strong>Segurança e Profissionalismo</strong> - Confiança que Você Sente</li>
+                        <li><strong>Acolhimento e Bem-Estar</strong> - Um Abraço em Forma de Cuidado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="localizacaoModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Nossa Localização</h2>
+                <div class="location-content">
+                    <div class="address-info">
+                        <h3>Beauty Woman Stars</h3>
+                        <p>Rua dos Andradas, 1464, Sala 73</p>
+                        <p>Porto Alegre - RS</p>
+                        <p>CEP: 90020-010</p>
+                        <p><strong>Horário de Funcionamento:</strong></p>
+                        <p>Segunda à Sábado: 9h às 19h</p>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe
+                            width="100%"
+                            height="450"
+                            style="border:0"
+                            loading="lazy"
+                            allowfullscreen
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.8892899421287!2d-51.229292!3d-30.029666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519799250ba7df3%3A0xed3a68b0bb9ce820!2sBeauty%20Woman%20Stars!5e0!3m2!1spt-BR!2sbr!4v1680000000000!5m2!1spt-BR!2sbr">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="hero">
+            <div class="container">
+                <h2>Transforme sua beleza em uma obra de arte</h2>
+                <p>Tratamentos personalizados para realçar sua beleza natural</p>
+                <div class="hero-buttons">
+                    <a href="#servicos" class="cta-button" onclick="window.location.href='treatments.html'">Ver Tratamentos</a>
+                    <div class="secondary-buttons">
+                        <button class="nav-button modal-trigger" data-modal="sobreModal" type="button">Sobre Nós</button>
+                        <button class="nav-button modal-trigger" data-modal="localizacaoModal">Nossa Localização</button>
+                        <button class="nav-button modal-trigger" data-modal="reviewsModal">Avaliações</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="reviewsModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>O Que Nossos Clientes Dizem</h2>
+                <div class="reviews-container" id="reviewsContainer">
+                    <!-- As avaliações serão inseridas aqui via JavaScript -->
+                </div>
+                <div style="text-align: center; margin-top: 32px;">
+                    <h3>Já é nosso cliente?</h3>
+                    <p>
+                        Compartilhe sua experiência! 
+                        <a href="https://g.page/r/CSDonLuwaDrtEAE/review" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="color: #1a73e8; text-decoration: none;">
+                            Clique aqui para avaliar
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Beauty Woman Stars</h3>
+                    <p>Rua dos Andradas, 1464, sala 73</p>
+                    <p>Porto Alegre - RS</p>
+                    <p>CEP: 90020-010</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/nutrikaoficial?igsh=MW40MHUxZmx0c2ljcw==" target="_blank" rel="noopener noreferrer">@Nutrikaoficial Instagram</a>
+                        <a href="https://www.instagram.com/drapriscilabio?igsh=MTM0YWtndXdrNzRtNA==" target="_blank" rel="noopener noreferrer">@PricilaMedeiros Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-hours">
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Segunda à Sábado: 9h às 19h</p>
+                    <div class="digital-consciousness">
+                        <a href="https://h3c7n.github.io/ConcienciaDigital/index.html" class="cta-button" target="_blank" rel="noopener noreferrer">Conciência Digital</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-partners">
+                                <div class="partner-logos">
+                    <a href="https://www.instagram.com/aprf_rs/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/logo_prf.png" alt="PRF Logo" class="partner-logo" title="Certificação PRF">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Beauty Woman Stars. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Garantir que o caminho está correto -->
+    <script src="js/reviews.js"></script>
+    <script src="js/treatments.js"></script>
+    <script src="js/modal.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const img = document.querySelector('.clinic-image');
+            if (img) {
+                console.log('Tentando carregar imagem:', img.src);
+                img.addEventListener('error', function() {
+                    console.error('Erro ao carregar imagem:', this.src);
+                });
+                img.addEventListener('load', function() {
+                    console.log('Imagem carregada com sucesso:', this.src);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
